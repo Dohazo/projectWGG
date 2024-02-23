@@ -1,0 +1,227 @@
+/* unt judul */
+
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono&family=Source+Code+Pro&family=Tilt+Prism&display=swap');
+/* unt nama */
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Kode+Mono:wght@700&family=Source+Code+Pro&family=Tilt+Prism&display=swap');
+/* unt h4 */
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+body{
+    /* background: #03173f; */
+    background-image: url("assets/wallpaper2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    margin: 0;
+
+}
+head{
+    overflow-x: hidden;
+}
+.tengah{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    min-height: 100vh;
+   
+}
+
+.full{
+    
+    min-height: 100vh;
+}
+h1{
+    font-family: "Kode Mono", monospace;
+    font-size: 100px;
+}
+.hide{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.trans{
+    backdrop-filter: blur(50px);
+    box-shadow: 5px 10px white;
+    
+}
+.navbar{
+    opacity: 0;
+    animation: fade 1.5s both;
+}
+@keyframes fade{
+    to{
+        opacity: 1;
+    }
+}
+.nav-link{
+    position: relative;
+}
+.nav-link::after{
+    content: '';
+    opacity: 0;
+    transition: all 0.25s;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    
+    background-color: aliceblue;
+    position: absolute;
+
+}
+.nav-link:hover::after{
+    opacity: 1;
+}
+.transparent{
+    border-top: 1px solid rgb(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background: transparent;
+    opacity: 0;
+    animation: slide 2s both;
+}
+img{
+    border-radius: 50px;
+    padding: 20px;
+    background: transparent;
+    background-color: rgba((152, 139, 204,0.270));
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgb(255, 255, 255, 0.3);
+    border-right: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+h3{
+    font-family: "Anta", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+.borderKeren{
+    border-top: 1px solid rgb(255, 255, 255, 0.3);
+    border-left: 1px solid rgb(255, 255, 255, 0.3);
+}
+.social{
+    bottom: 0;
+}
+.socialBorder{
+    border: 1px solid rgb(255, 255, 255, 0.3);
+    border-radius: 20px;
+}
+.tip{
+    color: beige;
+    font-size: 20px;
+    border-radius: 20px;
+    /* opacity: 0; */
+    transition: all 0.3s;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+
+
+.hidden{
+ opacity: 0;
+ /* transform: translateX(-100%); */
+ transition: 5s;
+}
+
+section{
+    
+    padding-bottom: 125px;
+    padding-top: 125px;
+    scroll-snap-align: start;
+    overflow-x: hidden;
+}
+
+.box{
+    
+    opacity: 0;
+    
+    animation: slide 1s both;
+}
+@keyframes slide{
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+        
+    }
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.tinggi{
+   min-height: 100%;
+}
+.efek:hover {
+    
+        transform: scale(1.1); /* Adjust the scale factor as needed */
+        box-shadow: 0 0 50px rgb(230, 230, 227,0.3); /* Add shadow with desired values */
+        transition: all 0.35s;
+        transition-timing-function:ease-in-out;
+}
+.urut{
+    border-radius: 25px;
+    padding: 30px;
+    border-left: 5px solid white;
+    border-bottom: 5px solid white;
+    min-height: 100%;
+    min-width: 100%;
+}
+.color{
+    color: aqua;
+    position: relative;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    
+    0%,18%,20%,50.1%,60%,65.1%,65%,80.1%,90%,92%{
+       color: deepskyblue;
+       text-shadow: none;
+    }
+    18.1%,21.1%,30%, 50%,60.1%,90%,92.1%,100%{
+        color: aqua ;
+        text-shadow: 0 0 10px aqua,
+        0 0 20px aqua,
+        0 0 40px aqua,
+        0 0 80px aqua,
+        0 0 100px aqua;
+    }
+}
+.tampil {
+    
+    border-bottom: 3px solid rgb(255, 255, 255, 0.5);;
+    border-top: 3px solid rgb(255, 255, 255, 0.5);;
+    border-radius: 25px;
+    translate: translateY(-100%);
+    opacity: 0;
+    transition: all 0.25s ease-in;
+}
+.icon:hover + .tampil{
+    opacity: 1;
+    translate: translateY(0%);
+}
+h4{
+    font-family: "Kdam Thmor Pro", sans-serif;
+}
+.scroll{
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+    
+}
